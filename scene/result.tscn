@@ -1,0 +1,95 @@
+[gd_scene load_steps=2 format=3 uid="uid://jj636ovjqueo"]
+
+[ext_resource type="Script" uid="uid://w6abgtnqg2rt" path="res://script/result.gd" id="1_s5opp"]
+
+[node name="result" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s5opp")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5137255, 0.81960785, 0.5921569, 1)
+
+[node name="ResultPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.08
+anchor_top = 0.2
+anchor_right = 0.92
+anchor_bottom = 0.8
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultContainer" type="VBoxContainer" parent="ResultPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="TitleLabel" type="Label" parent="ResultPanel/ResultContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Round Over"
+horizontal_alignment = 1
+
+[node name="OperationLabel" type="Label" parent="ResultPanel/ResultContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Operation: "
+horizontal_alignment = 1
+
+[node name="AnswerLabel" type="Label" parent="ResultPanel/ResultContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Answer: 0"
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="ResultPanel/ResultContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Score: 0"
+horizontal_alignment = 1
+
+[node name="BadgeLabel" type="Label" parent="ResultPanel/ResultContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Badge: "
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="ResultPanel/ResultContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="PlayAgainButton" type="Button" parent="ResultPanel/ResultContainer/Buttons"]
+layout_mode = 2
+custom_minimum_size = Vector2(180, 64)
+theme_override_font_sizes/font_size = 24
+text = "Play Again"
+
+[node name="BackButton" type="Button" parent="ResultPanel/ResultContainer/Buttons"]
+layout_mode = 2
+custom_minimum_size = Vector2(140, 64)
+theme_override_font_sizes/font_size = 24
+text = "Back"
