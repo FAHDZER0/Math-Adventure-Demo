@@ -1,3 +1,15 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Pages-only repo: ignore Godot source and editor files
+project.godot
+export_presets.cfg
+scene/
+script/
+scr/
+*.gd
+*.tscn
+*.import
+*.uid
+Child Corner Games Details.md
